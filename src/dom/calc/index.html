@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>계산하기</title>
+  <script src="app.js"></script>
+</head>
+<body>
+<input type="text" id="numA" value="10">
+<select id="sign">
+  <option value="+" selected>+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<input type="text" id="numB" value="20">
+<button type="button" id="btnCalc">계산하기</button>
+<span id="result"></span>
+<script>
+  // var btnCalc = document.getElementById('btnCalc');
+  // btnCalc.addEventListener('click',onCalculate); //콜백함수는 함수형태로 넣어야함(실행형태로 넣으면 안됨)
+
+  var elemA = document.getElementById('numA');
+  var elemB = document.getElementById('numB');
+  var elemSign = document.getElementById('sign');
+  var resultTemplate = document.getElementById('result');
+  var calc = new Calc();
+
+  elemA.addEventListener('keyup',onCalculate);
+  elemB.addEventListener('keyup',onCalculate);
+  elemSign.addEventListener('change',onCalculate);
+
+  function onCalculate(event){
+    var numA = elemA.value;
+    var numB = elemB.value;
+    var sign = elemSign.value;
+    var source = numA + sign + numB;
+    resultTemplate.innerHTML = calc.calculate(source);
+  }
+</script>
+</body>
+</html>
