@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>TODO LIST</title>
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    .complete strong{text-decoration:line-through;color:#ebebeb;}
+  </style>
+</head>
+<body>
+<h1>TODO LIST</h1>
+<div class="input-group">
+  <input id="addTodo" type="text" class="form-control">
+  <div class="input-group-append">
+    <button type="button" id="btnAdd" class="btn btn-primary">추가</button>
+  </div>
+</div>
+<h2>진짜 할일</h2>
+<ul class="list-group"></ul>
+<script src="./index.js"></script>
+</body>
+</html>
