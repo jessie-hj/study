@@ -41,6 +41,7 @@ function renderTodo() {
   });
 }
 
+
 function addEvent() {
   var $addTodo = $("#addTodo");
   var $btnAdd = $("#btnAdd");
